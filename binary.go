@@ -7,7 +7,7 @@ import (
 
 type File struct {
 	Header
-	Triangles []Triangle
+	Faces []Face
 }
 
 type Header struct {
@@ -19,8 +19,9 @@ func (h Header) String() string {
 	return string(h.Header[:])
 }
 
-type Triangle struct {
+type Face struct {
 	Normal [3]float32
+	// TODO Triangle Type
 	Verts [3][3]float32
 
 	AttributeByteCount uint16
@@ -32,8 +33,8 @@ func DecodeBinary(r io.Reader) (*File, error) {
 	if err != nil {
 		return nil, err
 	}
-	file.Triangles = make([]Triangle, file.NumTriangles)
-	err = binary.Read(r, binary.LittleEndian, file.Triangles)
+	file.Faces = make([]Face, file.NumTriangles)
+	err = binary.Read(r, binary.LittleEndian, file.Faces)
 	if err != nil {
 		return nil, err
 	}
