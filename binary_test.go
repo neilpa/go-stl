@@ -17,7 +17,7 @@ func TestDecodeBinary(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	fmt.Println(file.Header, len(file.Triangles))
+	fmt.Println(file.Header, len(file.Faces))
 }
 
 func TestBinaryEncoder(t *testing.T) { // TODO
