@@ -167,7 +167,7 @@ func DecodeASCII(r io.Reader) (*File, error) {
 	if err := scanner.Err(); err != nil {
 		return nil, err
 	}
-	return nil, fmt.Errorf("Unexpected EOF")
+	return nil, io.ErrUnexpectedEOF
 }
 
 func scanTriple(scanner *bufio.Scanner, v []float32) error {
@@ -190,7 +190,7 @@ func scanTriple(scanner *bufio.Scanner, v []float32) error {
 
 func scanFloat32(scanner *bufio.Scanner) (float32, error) {
 	if !scanner.Scan() {
-		return 0, fmt.Errorf("Unexpected EOF")
+		return 0, io.ErrUnexpectedEOF
 	}
 	if err := scanner.Err(); err != nil {
 		return 0, err
