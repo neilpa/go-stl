@@ -1,5 +1,7 @@
 # go-stl
 
+![Build Badge](https://github.com/neilpa/go-stl/workflows/CI/badge.svg)
+
 Simple go library for decoding binary and ASCII STL files as well as binary encoder.
 
 ## Usage
@@ -34,5 +36,5 @@ func main() {
 }
 ```
 
-See also [stlbox](blob/master/cmd/stlbox/main.go) for an example of calculating
+See also [stlbox](cmd/stlbox/main.go) for an example of calculating
 the bounding box.
