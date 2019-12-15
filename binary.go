@@ -6,6 +6,7 @@ import (
 	"io"
 )
 
+// File represents a parsed STL file.
 type File struct {
 	Header
 	Faces []Face
@@ -15,6 +16,7 @@ const (
 	commentSize = 80
 )
 
+// Header is the metadata of a parsed STL file.
 type Header struct {
 	Comment [commentSize]byte
 	NumTriangles uint32
@@ -24,6 +26,7 @@ func (h Header) String() string {
 	return string(h.Comment[:])
 }
 
+// Face contains the vertex and normal data for a triangle in the STL mesh.
 type Face struct {
 	Normal [3]float32
 	// TODO Triangle Type
@@ -32,6 +35,7 @@ type Face struct {
 	AttributeByteCount uint16
 }
 
+// DecodeBinary parses all the faces from an STL binary file.
 func DecodeBinary(r io.Reader) (*File, error) {
 	var file File
 	err := binary.Read(r, binary.LittleEndian, &file.Header)
@@ -46,6 +50,7 @@ func DecodeBinary(r io.Reader) (*File, error) {
 	return &file, nil
 }
 
+// BinaryEncoder is used for serializing STL mesh data in the binary format.
 type BinaryEncoder struct {
 	w io.Writer
 	s io.Seeker

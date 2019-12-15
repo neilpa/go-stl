@@ -1,6 +1,7 @@
 # go-stl
 
-[![](https://github.com/neilpa/go-stl/workflows/CI/badge.svg)](https://github.com/neilpa/go-stl/actions)
+[![CI](https://github.com/neilpa/go-stl/workflows/CI/badge.svg)](https://github.com/neilpa/go-stl/actions)
+[![GoDoc](https://godoc.org/neilpa.me/go-stl?status.svg)](https://godoc.org/neilpa.me/go-stl)
 
 Simple go library for decoding binary and ASCII STL files as well as binary encoder.
 

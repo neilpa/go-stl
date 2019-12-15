@@ -1,3 +1,5 @@
+// Package stl implements a decoder for ASCII and binary STL files. There's
+// also support for a binary encoder.
 package stl // import "neilpa.me/go-stl"
 
 import (
