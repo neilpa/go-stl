@@ -1,4 +1,4 @@
-package stl
+package stl // import "neilpa.me/go-stl"
 
 import (
 	"bytes"
