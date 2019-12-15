@@ -1,5 +1,7 @@
 # go-stl
 
+![Build Badge](workflows/CI/badge.svg)
+
 Simple go library for decoding binary and ASCII STL files as well as binary encoder.
 
 ## Usage
