@@ -1,3 +1,3 @@
-module neilpa.me/stl
+module neilpa.me/go-stl
 
 go 1.12

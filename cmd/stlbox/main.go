@@ -5,7 +5,7 @@ import (
 	"math"
 	"os"
 
-	"neilpa.me/stl"
+	"neilpa.me/go-stl"
 )
 
 func main() {

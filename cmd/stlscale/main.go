@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"neilpa.me/stl"
+	"neilpa.me/go-stl"
 )
 
 var out = flag.String("o", "", "Output file for the scaled model")

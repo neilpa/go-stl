@@ -1,4 +1,4 @@
-# stl
+# go-stl
 
 Simple go library for decoding binary and ASCII STL files as well as binary encoder.
 
@@ -8,12 +8,13 @@ Reading triangle vertices of a binary or ASCII STL file
 
 ```go
 package main
+
 import (
     "fmt"
     "log"
     "os"
 
-    "neilpa.me/stl"
+    "neilpa.me/go-stl"
 )
 
 func main() {
