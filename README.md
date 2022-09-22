@@ -37,5 +37,9 @@ func main() {
 }
 ```
 
-See also [stlbox](cmd/stlbox/main.go) for an example of calculating
-the bounding box.
+See also [stlbox](cmd/stlbox/main.go) for an example of calculating the bounding box.
+
+## License
+
+[MIT](/LICENSE)
+
